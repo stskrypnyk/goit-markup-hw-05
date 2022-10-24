@@ -91,6 +91,7 @@ img{
     padding: 32px 0;
     display: flex;
     position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 
@@ -131,6 +132,7 @@ img{
     padding: 32px 0;
     display: flex;
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-nav-link:hover,
 .auth-nav-link:focus{
@@ -140,6 +142,7 @@ img{
 .address-icon {
     margin-right: 10px;
     fill: var(--color-primary);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav-link:hover .address-icon,
@@ -192,9 +195,10 @@ img{
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -216,7 +220,7 @@ img{
     background-color: var(--color-background-primary);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -227,19 +231,12 @@ img{
     width: 30px;
     height: 30px;
     padding: 0;
+    margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     border-radius: 50%;
     background: var(--color-background-primary);
     border: 1px solid rgba(0, 0, 0, 0.1);
-
-}
-
-.close-icon {
-    width: 11px;
-    height: 11px;
 }
 
 /* Main Other */
@@ -402,6 +399,7 @@ img{
 
 .team-social-icon {
     fill: var(--color-fill-icons);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover .team-social-icon,
@@ -443,6 +441,7 @@ img{
 
 .clients-icon {
     fill: var(--color-fill-icons);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -498,6 +497,7 @@ img{
     text-decoration: none;
     font-style: normal;
     padding: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .foot-link-address:hover,
 .foot-link-address:focus {
@@ -510,6 +510,7 @@ img{
     letter-spacing: 0.03em;
     text-decoration: none;
     font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foot-link-contacts:hover,
@@ -554,6 +555,7 @@ img{
     height: 100%;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscription-icon {
@@ -598,6 +600,9 @@ img{
     cursor: pointer;
     border-radius: 2px;
     padding: 6px 25px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-filter:hover,
@@ -626,6 +631,7 @@ img{
 .project-link {
     display: block;
     text-decoration: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .project-card{
