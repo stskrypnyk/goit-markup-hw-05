@@ -108,7 +108,7 @@ img{
     position: absolute;
     background-color: var(--color-brand);
     border-radius: 2px;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     height: 4px;
@@ -192,9 +192,11 @@ img{
 
 .backdrop {
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.1);
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
     opacity: 1;
     z-index: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
@@ -233,10 +235,18 @@ img{
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     border-radius: 50%;
     background: var(--color-background-primary);
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.close-icon{
+    width: 17px;
+    height: 17px;
+
 }
 
 /* Main Other */
@@ -264,6 +274,8 @@ img{
     clip-path: inset(50%);
     margin: -1px;
 }
+
+/* Features */
 
 .features-list{
     list-style: none;
@@ -305,7 +317,7 @@ img{
     justify-content: center;
     margin-bottom: 30px;
 }
-/* Work */
+/* Work Type */
 
 .work-type{
     padding-top: 0;
@@ -319,12 +331,37 @@ img{
     margin: 0;
 }
 
-.work-type-photo{
+.work-thumb{
     display: flex;
+    position: relative;
     flex-basis: calc((100%-60px) / 3);
     padding: 0;
     margin: 0;
 }
+
+.work-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.work-description{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-background-primary);
+}
+
 /*Team units*/
 
 .section-team {
@@ -395,21 +432,19 @@ img{
 .team-social-link:hover,
 .team-social-link:focus {
     background-color: var(--color-brand);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
     fill: var(--color-fill-icons);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover .team-social-icon,
 .team-social-link:focus .team-social-icon {
     fill: var(--color-background-primary);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-social-item:not(:last-child) {
-    background-color: var(--color-background-primary);
-}
 
 /* Clients */
 
@@ -658,14 +693,8 @@ img{
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-card:hover .project-card-text,
-.project-card:focus .project-card-text{
-    transform: translateY(0%);
-    opacity: 1;
-}
-
-.project-link:hover,
-.project-link:focus {
+.project-link:hover .project-card-text,
+.project-link:focus .project-card-text{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     transform: translateY(0%);
     opacity: 1;

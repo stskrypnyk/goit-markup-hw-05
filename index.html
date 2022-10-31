@@ -46,11 +46,11 @@
             <div class="container">
                 <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ <br />ВАШОГО БІЗНЕСУ</h1>
                 <button type="button" class="button" data-modal-open>Замовити послугу</button>
-                <div class="backdrop-is-hidden" data-modal></div>
+                <div class="backdrop is-hidden" data-modal>
                     <div class="modal-window">
                         <button class="modal-button" data-modal-close>
                             <svg class="close-icon" width="11" height="11">
-                                <use href="./images/icons.svg#close-black"></use>
+                                <use href="./images/icons.svg#icon-close-black"></use>
                             </svg>
                         </button>
                     </div>
@@ -107,9 +107,24 @@
             <div class="container">
                 <h2 class="section-title">Чим ми займаємося</h2>
                 <ul class="work-type-list">
-                    <li class="work-type-photo"><img src="./images/box_1.jpg" alt="Програмування сайтів" width="370"></li>
-                    <li class="work-type-photo"><img src="./images/box_2.jpg" alt="Дизайн мобільних додатків" width="370"></li>
-                    <li class="work-type-photo"><img src="./images/box_3.jpg" alt="Підбір кольорової палітри" width="370"></li>
+                    <div class="work-thumb">
+                        <li class="work-type-photo"><img src="./images/box_1.jpg" alt="Програмування сайтів" width="370"></li>
+                        <div class="work-overlay">
+                            <p class="work-description">ДЕСКТОПНІ ДОДАТКИ</p>
+                        </div>
+                    </div>
+                    <div class="work-thumb">
+                        <li class="work-type-photo"><img src="./images/box_2.jpg" alt="Дизайн мобільних додатків" width="370"></li>
+                        <div class="work-overlay">
+                            <p class="work-description">МОБІЛЬНІ ДОДАТКИ</p>
+                        </div>
+                    </div>
+                    <div class="work-thumb">
+                        <li class="work-type-photo"><img src="./images/box_3.jpg" alt="Підбір кольорової палітри" width="370"></li>
+                        <div class="work-overlay">
+                            <p class="work-description">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
+                        </div>
+                    </div>                                                           
                 </ul>
             </div>
         </section>
